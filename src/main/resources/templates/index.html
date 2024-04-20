@@ -1,0 +1,14 @@
+<html>
+<head><title>Image</title></head>
+<body>
+	<form method="post" action="/upload" enctype=""multipart/form-data">
+	<input type="file" name="file">
+	<button type="submit">Upload</button>
+	</form>
+	
+	<div th:each"image : ${images}">
+		<img th:src="@{'/displayImage/' + ${image.id}}" alt="${image.name}">
+	</div>
+</body>
+	
+</html>
